@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
- 
+# See https://curc.readthedocs.io/en/latest/running-jobs/job-resources.html for more options
 #SBATCH --job-name=execute_hisat2-build
 #SBATCH --nodes=1
 #SBATCH --ntasks=4 # modify this number to reflect how many cores you want to use (up to 24)
