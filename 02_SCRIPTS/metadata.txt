@@ -1,0 +1,2 @@
+1  tester_SRR5832182_1.fastq	tester_SRR5832182_2.fastq	EG01	01_Ecoli_15_1	Ecoli	15	1
+2  tester_SRR5832183_1.fastq	tester_SRR5832183_2.fastq	EG02	01_Ecoli_15_1	Ecoli	15	2
