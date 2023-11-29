@@ -1,2 +1,3 @@
-1  tester_SRR5832182_1.fastq	tester_SRR5832182_2.fastq	EG01	01_Ecoli_15_1	Ecoli	15	1
-2  tester_SRR5832183_1.fastq	tester_SRR5832183_2.fastq	EG02	01_Ecoli_15_1	Ecoli	15	2
+1  GSM2705488_1_1k.fastq.gz GSM2705488_2_1k.fastq.gz    EG01	01_Ecoli_15_1	Ecoli	15	1
+2  GSM2705489_1_1k.fastq.gz GSM2705489_2_1k.fastq.gz	EG02	01_Ecoli_15_1	Ecoli	15	2
+3  GSM2705490_1_1k.fastq.gz GSM2705490_2_1k.fastq.gz	EG03	01_Ecoli_15_1	Ecoli	15	2

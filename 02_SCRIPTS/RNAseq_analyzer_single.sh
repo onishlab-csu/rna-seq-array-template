@@ -25,9 +25,11 @@
 #		samtools
 #		bedtools
 #		deep-tools
-#
-# 	Requires access to the Nishimura Lab installed software sources on SUMMIT.
-#
+
+
+module load anaconda/2022.10
+conda activate 2023dsci
+
 # REQUIRES:
 #    INPUT: .fastq files.    For each sample, paired forward and reverse sequencing files
 #								are required. These should be placed in an input
@@ -52,7 +54,7 @@
 #								sequence (.fa above).
 #
 # USAGE:
-# $ bash RNAseq_analyzer_221126.sh <metadata.txt> <number of threads>
+# $ bash RNAseq_analyzer_single.sh sample1 sample2 samplename <number of threads>
 #
 # OUTPUT:
 #
@@ -64,21 +66,25 @@
 
 
 ####### MODIFY THIS SECTION #############
+ROOT="/projects/dcking@colostate.edu/DSCI512/rna-seq-array-template"
 
 #The input samples live in directory:
 inputdir="<yourinputdir>"
+inputdir="${ROOT}/01_INPUT"
 
 #Metadata file. This pulls the metadata path and file from the command line
 metadata=$1
 
 #This is where the ht2 files live:
 hisat2path="<hisatpath/previx>"
+hisat2path="$inputdir/HISAT_INDEX/ecoli"
 
 #This is where the genome sequence lives:
 genomefa="<genome.fa>"
+genomefa="$inputdir/HISAT_INDEX/Escherichia_coli_gca_001606525.ASM160652v1_.dna.toplevel.fa"
 
 #This is where the gtf file lives:
-gtffile="<annotation.gtf>"
+gtffile="$inputdir/Escherichia_coli_gca_001606525.ASM160652v1_.57.gff3"
 
 #This is the output_directory:
 DATE=`date +%Y-%m-%d`
@@ -86,6 +92,7 @@ DATE=`date +%Y-%m-%d`
 #DATE='2022-12-03'
 
 outputdir="../03_output/"$DATE"_output/"
+outputdir="$ROOT/03_output/"$DATE"_output/"
 
 
 ########## DONE MODIFYING ###############
