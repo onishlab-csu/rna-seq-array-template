@@ -8,7 +8,8 @@
 #SBATCH --qos=normal                        # Should be 'normal' if partition is 'shas'; should be 'testing' if partition is 'shas-testing'
 #SBATCH --mail-type=END                     # Keep these two lines of code if you want an e-mail sent to you when it is complete.
 #SBATCH --mail-user=<youremail>             # add your e-mail here
-#SBATCH --output=log_RNAseq_pipe_%j.txt     # this will capture all output in a logfile with %j as the job #
+#SBATCH --job-name=RNAseq-execute
+#SBATCH --output=%x.%A_%a.log     # this will capture all output in a logfile with %j as the job #
 
 ######### Instructions ###########
 
@@ -34,3 +35,4 @@ samplename=${ARGS[3]}
 
 cmd="bash RNAseq_analyzer_single.sh $sample1 $sample2 $samplename $SLURM_NTASKS"
 echo $cmd
+time eval $cmd
