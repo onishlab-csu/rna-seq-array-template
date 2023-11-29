@@ -2,20 +2,24 @@
 
 ################################################
 # PROGRAM:
-# RNAseq_analyzer_221126.sh
+# RNAseq_analyzer_single.sh
 #
 # DESCRIPTION:
-# This is a very basic RNA-seq pipeline that I use for analyzing fastq reads. Step1 is a
+# Erin O.Nish. - This is a very basic RNA-seq pipeline that I use for analyzing fastq reads. Step1 is a
 # simple wrapper that performs quality control, genome alignment, basic format
 # conversions, and htseq-count tabulation for paired-end RNA-seq samples using a specified
 # genome. Step2 is a clean up program that removes unnecessary files and compresses files
 # to save space.
+# 
+# David C.K. - I have modified this to run on a single sample set, parsed from the metadata file,
+# and specified via the wrapper script which is run with the sbatch --array option.
+
 #
 # AUTHOR:
 # <yournamehere>
 #
 # START DATE:
-# November 26, 2022
+# November 29, 2023
 #
 # DEPENDENCIES:
 # 	Requires the installation of the follwing software: 
@@ -25,7 +29,14 @@
 #		samtools
 #		bedtools
 #		deep-tools
-
+#
+# CONDA environment reflects CURC Alpine HPC in November of 2023:
+#       conda create --name 2023dsci -c bioconda fastp bwa hisat2 bedtools samtools subread deeptools
+#
+#    If there are problems with the above, you may try to create the environment directly 
+#    using the yaml file provided in the current directory (02_SCRIPTS):
+#       conda env create -f 2023dsci_environment.yml
+# 
 
 module load anaconda/2022.10
 conda activate 2023dsci
@@ -66,7 +77,7 @@ conda activate 2023dsci
 
 
 ####### MODIFY THIS SECTION #############
-ROOT="/projects/dcking@colostate.edu/DSCI512/rna-seq-array-template"
+ROOT="/projects/dcking@colostate.edu/DSCI512/rna-seq-array-template" # providing a root prevents a lot of directory location problems
 
 #The input samples live in directory:
 inputdir="<yourinputdir>"
