@@ -1,0 +1,15 @@
+name: 2023dsci
+channels:
+  - bioconda
+  - defaults
+  - conda-forge
+  - davidaknowles
+dependencies:
+  - deeptools
+  - fastp
+  - subread
+  - hisat2
+  - samtools
+  - bedtools
+  - bwa
+prefix: /projects/.colostate.edu/dcking/software/anaconda/envs/2023dsci
