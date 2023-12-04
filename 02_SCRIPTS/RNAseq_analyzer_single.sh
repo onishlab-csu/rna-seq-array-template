@@ -11,7 +11,7 @@
 # genome. Step2 is a clean up program that removes unnecessary files and compresses files
 # to save space.
 # 
-# David C.K. - I have modified this to run on a single sample set, parsed from the metadata file,
+# David C.King - I have modified this to run on a single sample set, parsed from the metadata file,
 # and specified via the wrapper script which is run with the sbatch --array option.
 
 #
