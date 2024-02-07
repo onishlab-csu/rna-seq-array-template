@@ -9,7 +9,7 @@ In this directory, you
 This doesn't normally need to be done in a batch job if the files are of modest size (as in *C. elegans* chromosomes).
 
 ```
-bash download-chromosomes.sh
+bash download-celegans-chromosomes.sh
 ```
 
 Successful completion looks like below:
