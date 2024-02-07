@@ -27,3 +27,11 @@ chrX.fa.gz: OK
 ```
 
 The lines like `chrI.fa.gz: OK` are verifying the md5sums.
+
+### Ungzip and concatenate fasta files to a single genome sequence file
+
+```
+gunzip *.fa.gz
+cat *.fa > ce11_wholegenome.fa
+```
+
