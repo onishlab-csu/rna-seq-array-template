@@ -33,3 +33,8 @@ determine which line to parse.
 * Test on *C. elegans* example data from class. I tested it on Gomez *E. coli* data but nothing aligned.
 * Test the feature counts aggregation. Since there were no *E. coli* alignments, I haven't tried it yet.
 
+## Aligning against *C. elegans* assembly ce11
+
+The file is at UCSC 
+
+`wget https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/ce11.fa.gz`
