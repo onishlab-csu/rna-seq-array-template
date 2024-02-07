@@ -1,8 +1,8 @@
 ## Hisat2 index setup
 
-Here you:
-* download and verify the chromosome sequences, followed by 
-* building the hisat2 index files. 
+In this directory, you 
+* download and verify the chromosome sequences, and
+* build the hisat2 index files. 
 
 ### Download script 
 
