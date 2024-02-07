@@ -1,8 +1,12 @@
-## Setup
+## Hisat2 index setup
 
-Here you download and verify the chromosome sequences. This doesn't normally need to be done in a batch job.
+Here you:
+* download and verify the chromosome sequences, followed by 
+* building the hisat2 index files. 
 
-### Download script execution
+### Download script 
+
+This doesn't normally need to be done in a batch job if the files are of modest size (as in *C. elegans* chromosomes).
 
 ```
 bash download-chromosomes.sh
@@ -35,3 +39,6 @@ gunzip *.fa.gz
 cat *.fa > ce11_wholegenome.fa
 ```
 
+## Build hisat2 indexes
+
+sbatch hisat2-build.sbatch
