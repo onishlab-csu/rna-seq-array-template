@@ -75,39 +75,27 @@ conda activate 2023dsci
 #
 ################################################
 
-
-####### MODIFY THIS SECTION #############
-ROOT="/projects/dcking@colostate.edu/DSCI512/rna-seq-array-template" # providing a root prevents a lot of directory location problems
-
-#The input samples live in directory:
-inputdir="<yourinputdir>"
-inputdir="${ROOT}/01_INPUT"
-
 #Metadata file. This pulls the metadata path and file from the command line
 metadata=$1
 
-#This is where the ht2 files live:
-hisat2path="<hisatpath/previx>"
-hisat2path="$inputdir/HISAT_INDEX/ecoli"
 
-#This is where the genome sequence lives:
-genomefa="<genome.fa>"
-genomefa="$inputdir/HISAT_INDEX/Escherichia_coli_gca_001606525.ASM160652v1_.dna.toplevel.fa"
-
-#This is where the gtf file lives:
-gtffile="$inputdir/Escherichia_coli_gca_001606525.ASM160652v1_.57.gff3"
+####### LOAD SETTINGS: modify if desired  #############
+source ../project-settings.rc
+echo "Using the following settings:"
+echo "ROOT=$ROOT"
+echo "hisat2path=$hisat2path"
+echo "hisat2prefix=$hisat2prefix"
+echo "inputdir=$inputdir"
+echo "gtffile=$gtffile"
+echo "genomefa=$genomefa"
+echo "outputroot=$outputroot"
 
 #This is the output_directory:
 DATE=`date +%Y-%m-%d`
-#OR
-#DATE='2022-12-03'
-
-outputdir="../03_output/"$DATE"_output/"
-outputdir="$ROOT/03_output/"$DATE"_output/"
-
+outputdir="${outputroot}/"$DATE"_output/"
+echo "outputdir=$outputdir"
 
 ########## DONE MODIFYING ###############
-
 
 
 ########## BEGIN CODE ###############
@@ -197,7 +185,7 @@ mkdir -p $outhisat2
 #do
 
 ## execute hisat2
-cmd3="hisat2 -x $hisat2path -1 $outputdir"01_fastp/"$samplename/$samplename"_trim_1.fastq" -2 $outputdir"01_fastp/"$samplename/$samplename"_trim_2.fastq" -S ${outhisat2}${samplename}.sam --summary-file ${outhisat2}${samplename}_summary.txt --no-unal -p $pthread"
+cmd3="hisat2 -x $hisat2prefix -1 $outputdir"01_fastp/"$samplename/$samplename"_trim_1.fastq" -2 $outputdir"01_fastp/"$samplename/$samplename"_trim_2.fastq" -S ${outhisat2}${samplename}.sam --summary-file ${outhisat2}${samplename}_summary.txt --no-unal -p $pthread"
 echo -e "\t$ $cmd3"
 time eval $cmd3
 
