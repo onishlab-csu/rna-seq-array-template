@@ -1,4 +1,4 @@
-PROJ_ROOT=$(readlink -f $(dirname $BASH_SOURCE))
+PROJ_ROOT=$(readlink -f $(dirname $BASH_SOURCE)) # determine the directory of this current file
 
 # this is the conda environment name
 ENVIRONMENT_NAME=2023dsci
