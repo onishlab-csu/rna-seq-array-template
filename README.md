@@ -2,7 +2,6 @@
 
 ## Requirements
 * conda to install from environment, otherwise the following tools:
-*
   - deeptools
   - fastp
   - subread
