@@ -82,7 +82,7 @@ metadata=$1
 ####### LOAD SETTINGS: modify if desired  #############
 source ../project-settings.rc
 echo "Using the following settings:"
-echo "ROOT=$ROOT"
+echo "ROOT=$PROJ_ROOT"
 echo "hisat2path=$hisat2path"
 echo "hisat2prefix=$hisat2prefix"
 echo "inputdir=$inputdir"
