@@ -16,8 +16,8 @@ HISAT2PREFIX="${HISAT2PATH}/ce11" # this is the file prefix for the indices. Eg:
 GTFFILE="${HISAT2PATH}/Escherichia_coli_gca_001606525.ASM160652v1_.57.gff3"
 
 #This is where the genome sequence lives:
-GENOMEFA="${HISAT2PATH}/Escherichia_coli_gca_001606525.ASM160652v1_.dna.toplevel.fa"
+GENOMEFA="${HISAT2PATH}/ce11_wholegenome.fa"
 
 # The script will create a subdirectory under the following with the date incorporated
-OUTPUTROOT="${PROJ_ROOT}/03_output"
+OUTPUTROOT="${PROJ_ROOT}/03_OUTPUT"
 
