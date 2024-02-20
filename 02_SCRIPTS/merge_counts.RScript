@@ -1,6 +1,8 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
-
+paste2 = function (items, sep) {
+    do.call(paste, as.list(items, sep=sep)) 
+} 
 bigdf = data.frame()
 
 for (fname in args) 
@@ -9,7 +11,8 @@ for (fname in args)
 
     fname=strsplit(fname,'.',fixed=T)[[1]][1]; 
     parts=strsplit(fname,'_',fixed=T)[[1]]
-    sample_name=do.call(paste, as.list(c(parts[2:length(parts)], sep='_')) ) # do.call bypasses the ellipsis in paste(...)
+    #sample_name=do.call(paste, as.list(c(parts[2:length(parts)], sep='_')) ) # do.call bypasses the ellipsis in paste(...)
+    sample_name=paste2(parts[2:length(parts)], sep='_')
     print(sample_name)
 
     colnames(df) <- c("chr", "start", "stop", "strand", "length", sample_name)
