@@ -41,4 +41,8 @@ cat *.fa > ce11_wholegenome.fa
 
 ## Build hisat2 indexes
 
+Submit job:
+
+```
 sbatch hisat2-build.sbatch
+```
