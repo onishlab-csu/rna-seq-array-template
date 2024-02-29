@@ -12,7 +12,7 @@ This doesn't normally need to be done in a batch job if the files are of modest 
 bash download-celegans-chromosomes.sh
 ```
 
-Successful completion looks like below:
+This script also checks the md5 sums. Successful completion looks like below:
 
 ```
 --2024-02-06 21:42:27--  https://hgdownload.soe.ucsc.edu/goldenPath/ce11/chromosomes/chrX.fa.gz
@@ -30,7 +30,7 @@ chrV.fa.gz: OK
 chrX.fa.gz: OK
 ```
 
-The lines like `chrI.fa.gz: OK` are verifying the md5sums.
+A line like `chrI.fa.gz: OK` denotes a valid checksum.
 
 ### Ungzip and concatenate fasta files to a single genome sequence file
 
