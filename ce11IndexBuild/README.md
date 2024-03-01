@@ -51,6 +51,6 @@ sbatch hisat2-build.sbatch
 
 There are different choices for the gene annotations:
 
-[ce11.ensGene.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ensGene.gtf.gz) 
-
-[ce11.ncbiRefSeq.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ncbiRefSeq.gtf.gz) 
+- [ce11.ensGene.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ensGene.gtf.gz) 
+- [ce11.ncbiRefSeq.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ncbiRefSeq.gtf.gz) 
+- [ce11.refGene.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.refGene.gtf.gz) 
