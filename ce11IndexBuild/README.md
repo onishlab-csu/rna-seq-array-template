@@ -49,7 +49,11 @@ sbatch hisat2-build.sbatch
 
 ## Download gene models
 
-There are different choices for the gene annotations:
+[GTF vs GFF3](https://www.ncbi.nlm.nih.gov/genbank/genomes_gff/)
+
+
+
+There are different choices for the gene annotations from UCSC:
 
 - [ce11.ensGene.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ensGene.gtf.gz) 
 - [ce11.ncbiRefSeq.gtf.gz](https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/genes/ce11.ncbiRefSeq.gtf.gz) 
