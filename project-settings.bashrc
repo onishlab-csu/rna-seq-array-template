@@ -3,7 +3,7 @@
 ENVIRONMENT_NAME=2023dsci
 
 # put your project's full path here or leave blank to use the current directory
-PROJECT_FULL_PATH=/tmp
+PROJECT_FULL_PATH=
 
 SCRIPT_DIR=$(readlink -f $(dirname $BASH_SOURCE)) # determine the directory of this current file
 PROJ_ROOT=${PROJECT_FULL_PATH:=$SCRIPT_DIR}
