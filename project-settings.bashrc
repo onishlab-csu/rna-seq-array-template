@@ -1,6 +1,11 @@
-
 # this is the conda environment name
 ENVIRONMENT_NAME=2023dsci
+
+# this activates conda in your script
+module load anaconda/2022.10 # if you are on Alpine
+source $(dirname $CONDA_EXE)/../etc/profile.d/conda.sh # use this if you are not using BASH as your main shell (e.g. zsh on mac)
+conda activate $ENVIRONMENT_NAME
+
 
 # put your project's full path here or leave blank to use the current directory
 PROJECT_FULL_PATH=

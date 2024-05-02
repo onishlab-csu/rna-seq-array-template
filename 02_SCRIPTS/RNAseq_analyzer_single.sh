@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 ################################################
 # PROGRAM:
 # RNAseq_analyzer_single.sh
@@ -38,8 +37,9 @@
 #       conda env create -f 2023dsci_environment.yml
 # 
 
-module load anaconda/2022.10
-conda activate 2023dsci
+# DO NOT EDIT: this figures out directory settings and loads conda environment
+THIS_SCRIPT_DIR=$(readlink -f $(dirname $BASH_SOURCE))
+source ${THIS_SCRIPT_DIR}/../project-settings.bashrc
 
 # REQUIRES:
 #    INPUT: .fastq files.    For each sample, paired forward and reverse sequencing files
@@ -80,20 +80,21 @@ metadata=$1
 
 
 ####### LOAD SETTINGS: modify if desired  #############
-source ../project-settings.rc
 echo "Using the following settings:"
 echo "ROOT=$PROJ_ROOT"
-echo "hisat2path=$hisat2path"
-echo "hisat2prefix=$hisat2prefix"
-echo "inputdir=$inputdir"
-echo "gtffile=$gtffile"
-echo "genomefa=$genomefa"
-echo "outputroot=$outputroot"
+echo "HISAT2PATH=$HISAT2PATH"
+echo "HISAT2PREFIX=$HISAT2PREFIX"
+echo "INPUTDIR=$INPUTDIR"
+echo "GTFFILE=$GTFFILE"
+echo "GENOMEFA=$GENOMEFA"
+echo "OUTPUTROOT=$OUTPUTROOT"
 
 #This is the output_directory:
 DATE=`date +%Y-%m-%d`
-outputdir="${outputroot}/"$DATE"_output/"
+outputdir="${OUTPUTROOT}/"$DATE"_output/"
 echo "outputdir=$outputdir"
+echo "Executing tools installed in: $CONDA_PREFIX"
+exit 0
 
 ########## DONE MODIFYING ###############
 
