@@ -1,15 +1,19 @@
-PROJ_ROOT=$(readlink -f $(dirname $BASH_SOURCE)) # determine the directory of this current file
 
 # this is the conda environment name
 ENVIRONMENT_NAME=2023dsci
 
-# put your project's full path here:
+# put your project's full path here or leave blank to use the current directory
+PROJECT_FULL_PATH=/tmp
+
+SCRIPT_DIR=$(readlink -f $(dirname $BASH_SOURCE)) # determine the directory of this current file
+PROJ_ROOT=${PROJECT_FULL_PATH:=$SCRIPT_DIR}
+
 
 #The input samples live in directory:
 INPUTDIR="${PROJ_ROOT}/01_INPUT"
 
 #This is where the ht2 files live:
-HISAT2PATH="${PROJ_ROOT}/ce11IndexBuild"
+HISAT2PATH="${INPUTDIR}/ce11IndexBuild"
 HISAT2PREFIX="${HISAT2PATH}/ce11" # this is the file prefix for the indices. Eg: ce11.1.ht2  ce11.2.ht2, etc.
 
 #This is where the gtf file lives:
